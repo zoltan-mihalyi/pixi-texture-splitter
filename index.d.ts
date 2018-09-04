@@ -4,6 +4,6 @@ declare module '@eversource/pixi-texture-splitter' {
     export class SplitTexture {
         constructor(baseTexture: BaseTexture, width?: number, height?: number);
 
-        subTexture(x: number, y: number, width: number, height: number);
+        subTexture(x: number, y: number, width: number, height: number): PIXI.Texture;
     }
 }
