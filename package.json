@@ -1,8 +1,9 @@
 {
   "name": "@eversource/pixi-texture-splitter",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "",
   "main": "index.js",
+  "types": "index.d.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -12,6 +13,7 @@
     "pixi.js": "^4.8.2"
   },
   "devDependencies": {
+    "@types/pixi.js": "^4.8.0",
     "pixi.js": "^4.8.2"
   }
 }

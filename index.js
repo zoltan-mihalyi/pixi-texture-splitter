@@ -9,7 +9,7 @@
         throw new Error('Cannot determine module system!');
     }
 })(function (exports, PIXI) {
-    function SplittedTexture(texture, maxWidth, maxHeight) {
+    function SplitTexture(texture, maxWidth, maxHeight) {
         if (!(texture instanceof PIXI.BaseTexture)) {
             throw new Error('Texture is not PIXI.BaseTexture!');
         }
@@ -33,7 +33,7 @@
         }
     }
 
-    SplittedTexture.prototype.subTexture = function (x, y, w, h) {
+    SplitTexture.prototype.subTexture = function (x, y, w, h) {
         var column = Math.floor(x / this.maxWidth);
         var row = Math.floor(y / this.maxHeight);
 
@@ -49,7 +49,7 @@
         return new PIXI.Texture(cell, new PIXI.Rectangle(x % this.maxWidth, y % this.maxHeight, w, h));
     };
 
-    PIXI.extras.SplittedTexture = SplittedTexture;
+    PIXI.extras.SplitTexture = SplitTexture;
 
-    exports.SplittedTexture = SplittedTexture;
+    exports.SplitTexture = SplitTexture;
 });
